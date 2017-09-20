@@ -6,6 +6,13 @@ var cleanCSS = require('gulp-clean-css');
 var rename = require("gulp-rename");
 var uglify = require('gulp-uglify');
 var pkg = require('./package.json');
+var build = require('gulp-build');
+ 
+gulp.task('build', function() {
+  gulp.src('scripts/*.js')
+      .pipe(build({ GA_ID: '123456' }))
+      .pipe(gulp.dest('dist'))
+});
 
 // Set the banner content
 var banner = ['/*!\n',
