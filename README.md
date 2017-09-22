@@ -21,7 +21,7 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 
 ## Changes
 
-I made this as a landing page for a project I'm working on. It is simply a single, static landing page with a form taken from (https://formspree.io). 
+I made this as a landing page for a project I'm working on. It is simply a single, static landing page with a form taken from [Formspree](https://formspree.io). 
 
 ## Usage
 
@@ -29,7 +29,7 @@ I made this as a landing page for a project I'm working on. It is simply a singl
 
 After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-View (https://formspree.io) for how to get started using their form.
+View https://formspree.io for how to get started using their form.
 
 ### Advanced Usage
 
