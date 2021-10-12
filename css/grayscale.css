@@ -1,3 +1,8 @@
+/*!
+ * Start Bootstrap - Grayscale v4.0.0-beta (https://startbootstrap.com/template-overviews/grayscale)
+ * Copyright 2013-2021 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
+ */
 body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   position: relative;
@@ -157,9 +162,9 @@ a {
   .content-section {
     padding-top: 200px;
     padding-bottom: 200px; }
-
   #map {
     height: 350px; } }
+
 .btn {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 400;
@@ -215,5 +220,3 @@ img::-moz-selection {
 
 body {
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0.2); }
-
-/*# sourceMappingURL=grayscale.css.map */

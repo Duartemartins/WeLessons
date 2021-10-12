@@ -37,7 +37,7 @@ gulp.task('sass', function() {
 });
 
 // Minify compiled CSS
-gulp.task('minify-css', ['sass'], function() {
+gulp.task('minify-css', gulp.series('sass'), function() {
   return gulp.src('css/grayscale.css')
     .pipe(cleanCSS({
       compatibility: 'ie8'
@@ -69,7 +69,7 @@ gulp.task('minify-js', function() {
 
 // Copy vendor files from /node_modules into /vendor
 // NOTE: requires `npm install` before running!
-gulp.task('copy', function() {
+gulp.task('copy', async function() {
   gulp.src([
       'node_modules/bootstrap/dist/**/*',
       '!**/npm.js',
@@ -96,22 +96,21 @@ gulp.task('copy', function() {
       '!node_modules/font-awesome/*.json'
     ])
     .pipe(gulp.dest('vendor/font-awesome'))
+    console.log("HTTP Server Started");
 })
 
 // Default task
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
+gulp.task('default', gulp.series('sass', 'minify-css', 'minify-js', 'copy'));
 
 // Configure the browserSync task
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      baseDir: ''
-    },
+    proxy: "localhost",
   })
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', gulp.series('browserSync', 'sass', 'minify-css', 'minify-js'), function() {
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('css/*.css', ['minify-css']);
   gulp.watch('js/*.js', ['minify-js']);
