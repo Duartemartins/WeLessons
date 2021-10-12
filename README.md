@@ -17,7 +17,7 @@ Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework 
 
 ## Preview
 
-**[View Live Preview](https://www.Welessons.com)**
+![Homepage Preview](/homepage.png)
 
 ## Changes
 
